@@ -1,0 +1,25 @@
+@use 'vuetify/styles';
+
+/* --- Анимация стрелочки для кнопок Get started --- */
+.hover-arrow-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Изначально стрелочка скрыта (ширина 0, прозрачная) */
+.hover-arrow-btn .arrow-icon {
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  transform: translateX(-10px);
+}
+
+/* При наведении на кнопку стрелочка появляется */
+.hover-arrow-btn:hover .arrow-icon {
+  opacity: 1;
+  max-width: 30px; /* Задаем максимальную ширину, чтобы текст сдвинулся */
+  transform: translateX(0);
+}
